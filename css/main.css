@@ -9,6 +9,11 @@ html {
   min-height: 100vh;
 }
 
+.clearlink, .clearlink:hover, .clearlink:active, .clearlink:visited {
+  text-decoration: none;
+  color: #1e1e1e;
+}
+
 .container {
   min-height: 100vh;
   max-width: 1440px;
