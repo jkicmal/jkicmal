@@ -1,0 +1,320 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body,
+html {
+  min-height: 100vh;
+}
+
+.container {
+  min-height: 100vh;
+  max-width: 1440px;
+  margin-right: auto;
+  margin-left: auto;
+  position: relative;
+  padding: 20px;
+  display: flex;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  min-height: 100%;
+}
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+  border-bottom: 1px solid #1e1e1e;
+}
+nav .mobile-nav-button {
+  display: none;
+}
+@media (max-width: 1024px) {
+  nav {
+    justify-content: flex-start;
+    flex-direction: column;
+  }
+  nav .mobile-nav-button {
+    display: block;
+  }
+  nav ul {
+    flex-direction: column;
+    overflow-x: hidden;
+  }
+  nav.visible ul {
+    height: auto;
+  }
+  nav.hidden ul {
+    height: 0;
+  }
+}
+nav .mobile-nav-button {
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+  position: relative;
+  background-color: transparent;
+  border: 0px;
+}
+nav .mobile-nav-button img {
+  width: 100%;
+  height: 100%;
+}
+nav ul {
+  display: flex;
+  margin-bottom: 0;
+}
+nav ul li {
+  display: flex;
+  height: 50px;
+}
+nav ul li a {
+  display: flex;
+  align-items: center;
+  padding: 0px 20px;
+  text-decoration: none;
+  color: #1e1e1e;
+  transition: border-bottom 100ms 0ms ease-in-out;
+}
+nav ul li a:hover {
+  text-decoration: none;
+  color: #1e1e1e;
+  border-bottom: 3px solid #1e1e1e;
+}
+
+.hero {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 100px;
+}
+.hero h1 {
+  font-family: "Oswald", sans-serif;
+  font-size: 64px;
+}
+
+#about-me .content {
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 1024px) {
+  #about-me .content {
+    flex-direction: column;
+  }
+}
+#about-me .content .photo {
+  width: 15vw;
+  max-width: 200px;
+  height: 15vw;
+  max-height: 200px;
+  border-radius: 100%;
+  border: 2px solid #1e1e1e;
+  background-image: url("../assets/images/me.png");
+  background-size: cover;
+  background-position: center;
+}
+@media (max-width: 1024px) {
+  #about-me .content .photo {
+    height: 200px;
+    width: 200px;
+  }
+}
+#about-me .content p {
+  width: 80vw;
+  max-width: 800px;
+  font-size: 22px;
+  padding: 20px;
+  text-align: justify;
+}
+@media (max-width: 1024px) {
+  #about-me .content p {
+    width: 90vw;
+  }
+}
+
+#skills .content {
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  padding: 50px;
+}
+#skills .content .skill {
+  padding: 5px;
+}
+@media (max-width: 768px) {
+  #skills .content .skill {
+    width: 100%;
+  }
+}
+@media (min-width: 769px) and (max-width: 1280px) {
+  #skills .content .skill {
+    width: 50%;
+  }
+}
+
+@media (min-width: 1281px) {
+  #skills .content .skill {
+    width: 30%;
+  }
+}
+#skills .content .skill .divider {
+  height: 3px;
+  background-color: #1e1e1e;
+  width: 100px;
+}
+#skills .content .skill p {
+  padding: 10px;
+  min-height: 100px;
+}
+
+#web .content h1,
+#games .content h1 {
+  font-family: "Oswald", sans-serif;
+  font-size: 50px;
+  border-bottom: 1px solid #1e1e1e;
+}
+
+#contact {
+  font-family: "Open Sans", sans-serif;
+}
+#contact .content {
+  justify-content: center;
+  align-items: center;
+}
+#contact .content p {
+  text-align: center;
+  font-size: 24px;
+}
+#contact .content .icons a {
+  display: inline-block;
+  width: 64px;
+  height: 64px;
+  border-radius: 100%;
+}
+#contact .content .icons a img {
+  width: 100%;
+  height: 100%;
+}
+
+footer {
+  padding: 5px;
+  font-size: 12px;
+  color: dimgray;
+  background-color: #1e1e1e;
+}
+
+.projects {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  position: relative;
+}
+.projects .project {
+  margin: 20px;
+  padding: 5px;
+  box-shadow: 3px 3px 5px 2px rgba(105, 105, 105, 0.5);
+}
+@media (max-width: 768px) {
+  .projects .project {
+    width: 100%;
+  }
+}
+@media (min-width: 769px) and (max-width: 1280px) {
+  .projects .project {
+    width: 46%;
+  }
+}
+
+@media (min-width: 1281px) {
+  .projects .project {
+    width: 28%;
+  }
+}
+.projects .project small {
+  font-family: "Open Sans", sans-serif;
+}
+.projects .project h2 {
+  margin-top: 10px;
+  padding: 0px 10px;
+  letter-spacing: 2px;
+  font-family: "Oswald", sans-serif;
+  font-weight: 500;
+}
+.projects .project p {
+  padding: 0px 10px;
+  text-align: justify;
+  font-family: "Open Sans", sans-serif;
+  min-height: 150px;
+}
+.projects .project .image-container {
+  position: relative;
+  max-height: 256px;
+  overflow: hidden;
+  background-color: rgba(105, 105, 105, 0.2);
+}
+.projects .project .image-container:hover .image-button-container {
+  background-color: rgba(105, 105, 105, 0.3);
+}
+.projects .project .image-container:hover .image-button-container .image-button {
+  transform: translateY(0px);
+}
+.projects .project .image-container img {
+  width: 100%;
+}
+.projects .project .image-container .image-button-container {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(105, 105, 105, 0);
+  position: absolute;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s 0s ease-in-out;
+}
+.projects .project .image-container .image-button-container .image-button {
+  text-decoration: none;
+  padding: 10px 50px;
+  background-color: #fff;
+  border-radius: 50px;
+  transform: translateY(300px);
+  transition: transform 0.3s 0s ease-in-out;
+  box-shadow: 3px 3px 5px 2px rgba(105, 105, 105, 0.5);
+  color: #1e1e1e;
+}
+
+#slide-up {
+  border-radius: 100%;
+  width: 50px;
+  height: 50px;
+  background-image: url("../assets/icons/slide-up.png");
+  background-size: cover;
+  background-position: center;
+  position: fixed;
+  right: 10px;
+  z-index: 20;
+  transition: bottom 0.3s ease-in-out;
+}
+#slide-up a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+#slide-up.hidden {
+  bottom: -60px;
+}
+#slide-up.visible {
+  bottom: 10px;
+}
+
+/*# sourceMappingURL=main.css.map */
