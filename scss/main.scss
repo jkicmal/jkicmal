@@ -107,7 +107,7 @@ nav {
   height: 100%;
   display: flex;
   align-items: center;
-  padding-left: 100px;
+  padding-left: 70px;
   h1 {
     font-family: $font-oswald;
     font-size: 64px;
@@ -322,5 +322,45 @@ footer {
   }
   &.visible {
     bottom: 10px;
+  }
+}
+
+.fade-from-top {
+  animation: fade-from-top;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+}
+@keyframes fade-from-top {
+  0% {
+    transform: translateY(-200px);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+.fade-from-right {
+  animation: fade-from-right;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+@keyframes fade-from-right {
+  0% {
+    transform: translateX(-200px);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
   }
 }
