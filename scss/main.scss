@@ -265,8 +265,12 @@ footer {
       &:hover {
         .image-button-container {
           background-color: rgba(105, 105, 105, 0.3);
+          display: flex;
+          flex-direction: column;
+
           .image-button {
             transform: translateY(0px);
+            margin-bottom: 5px;
           }
         }
       }
